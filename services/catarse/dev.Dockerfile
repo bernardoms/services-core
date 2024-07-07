@@ -9,7 +9,9 @@ ENV RUBY_PACKAGES ruby ruby-io-console ruby-bundler ruby-irb ruby-bigdecimal rub
 RUN apk update && \
     apk upgrade && \
     apk --update add --virtual build_deps $BUILD_PACKAGES && \
-    apk --update add $RUBY_PACKAGES
+    apk --update add $RUBY_PACKAGES && \
+    apk add gcompat && \
+    apk add --no-cache python2 g++ make
 
 
 RUN node -v
@@ -23,9 +25,10 @@ COPY Gemfile.lock /usr/app/
 COPY . /usr/app
 #
 
-RUN bundle install
-
-RUN yarn install
+RUN bundle install && \
+yarn add sass -D && \
+#yarn audit fix && \
+yarn install --target_arch=x64
 
 #
 #RUN cp /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime && echo "America/Sao_Paulo" >  /etc/timezone

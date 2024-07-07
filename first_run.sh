@@ -32,7 +32,7 @@ sleep 5
 docker-compose up catarse_migrations
 
 # install front end dependencies
-docker-compose exec catarse npm install
+docker-compose exec catarse yarn install
 
 # up all
 docker-compose up -d

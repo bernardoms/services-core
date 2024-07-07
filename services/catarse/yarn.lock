@@ -1212,6 +1212,7 @@ caniuse-lite@^1.0.30001164:
   dependencies:
     "@sentry/browser" "^5.7.1"
     chart.js "1.0.2"
+    liquidjs "^9.25.1"
     mithril "^1.1.6"
     mithril-hooks "https://github.com/grpse/mithril-hooks.git#v0.6.1-root"
     mithril-postgrest "https://github.com/catarse/mithril-postgrest.git#4.1.0"
@@ -2052,6 +2053,11 @@ leven@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/leven/-/leven-1.0.2.tgz#9144b6eebca5f1d0680169f1a6770dcea60b75c3"
   integrity sha1-kUS27ryl8dBoAWnxpncNzqYLdcM=
+
+liquidjs@^9.25.1:
+  version "9.43.0"
+  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.43.0.tgz#69924ed3bbe143c17c13ea675cc70390d72eb307"
+  integrity sha512-qZZuL5Emja2UgCqiLewiw9bvwZQwm19TTGFxDkonVzB4YSTOZ8tuTVo/7Uu/AeW1cL2Qb/at3DSoV8wwyFXQCw==
 
 loader-utils@^1.4.0:
   version "1.4.0"

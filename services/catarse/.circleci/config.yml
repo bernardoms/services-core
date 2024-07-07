@@ -19,8 +19,8 @@ jobs:
       - run: sudo apt install postgresql-client-11
       - run: bundle install
       - run: npm install
-      - run: RAILS_ENV=test DATABASE_URL=postgres://postgres:example@localhost:5432/catarse_test bundle exec rails db:migrate
-      - run: RAILS_ENV=test DATABASE_URL=postgres://postgres:example@localhost:5432/catarse_test bundle exec rspec spec
+      - run: RAILS_ENV=development DATABASE_URL=postgres://postgres:example@localhost:5432/catarse_db bundle exec rails db:migrate
+      - run: RAILS_ENV=development DATABASE_URL=postgres://postgres:example@localhost:5432/catarse_db bundle exec rspec spec
 
   deploy_sandbox:
     docker:
